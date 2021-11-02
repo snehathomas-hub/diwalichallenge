@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diwali Wisher</title>
+<style>
+    body{
+        /* background-image: url('https://i.pinimg.com/736x/35/fa/5a/35fa5a2fcc491a23c205ca551ff0d7a1.jpg'); */
+        background-image: url('https://i0.wp.com/sociallover.net/wp-content/uploads/2019/10/18.gif?resize=480%2C318');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #label{
+        margin: 50px;
+        font-size: 60px;
+        font-family: cursive;
+        font-style: oblique;
+        font-weight: bold;
+        color: white;
+    }
+    #wish{
+        margin: 50px;
+        font-size: 60px;
+        font-family: cursive;
+        font-style: oblique;
+        font-weight: bold;
+        color: white;
+    }
+    h1{
+        font-size: 100px;
+        margin: 20px;
+        font-family: fantasy;
+        font-weight: bold;
+        font-style: italic;
+        color: white;
+    }
+    /* Full-width input fields */
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+    </style>
+</head>
+<body>
+    <h1>Welcome <%=name%></h1>
+    <label id="label">SNEHA THOMAS wishes you...</label> <br> <br>
+   
+    <img src="https://hdvidstatus.com/wp-content/uploads/2018/10/Beautiful-Diwali-Animated-Image-For-Whatsapp.gif" style="margin-left: 240px;" width="900px" height="500px" alt="">
+    
+     <form id="mailform"  method="post">
+     <!-- <div id="content">
+    <label>Enter name of recepient</label>
+    <input type="text" id="name" name="name"> <br>
+    <label>Enter mail of recepient</label>
+    <input type="text" id="email" name="email"> <br>
+    <button name="submit">submit</button>  -->
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:100%;background-color: yellow;color: black;">Send wishes to your loved ones.</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+     
+    </div>
+
+    <div class="container">
+     
+      <input type="text" id="name" placeholder="Enter name of recepient" name="uname" required> <br>
+
+      
+      <input type="text" id="email" placeholder="Enter email id of recepient" name="psw" required> <br>
+        
+      <button name="submit" type="submit">Send wish</button>
+    </div>
+
+   
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</div>
+    <!-- <a href="/sendmail">Send via email</a> -->
+</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $('#mailform').submit((e)=>{
+        e.preventDefault()
+        $.ajax({
+            url:'/sendmail',
+            method:'POST',
+            data: {
+                name:$('#name').val(),
+                email:$('#email').val(),
+            },
+            success:(response) =>{
+                console.log(response);
+                if(response.success){
+                    alert("Mail sent successfully to" + response.name);
+                    location.reload();
+                } else{
+                    alert("Failed");
+                   window.location.href='wish.ejs';
+                }
+            },
+            error:(response)=>{
+                alert("Please try again");
+            }
+        })
+    })
+</script>
+</body>
+</html>
